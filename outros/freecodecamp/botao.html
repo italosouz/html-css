@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botao</title>
+    <style>
+        .botao {
+            position: absolute;
+
+            height: 30px;
+            width: 80px;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            margin: auto;
+
+            background-color: red;
+
+            color: white;
+            font-weight: 600;
+        } /*animation-fill-mode faz com que após o tempo indicado, a cor do botão permanesça com a indicada no keyframes até que a seta do mouse saia de cima do botão.*/
+        .botao:hover {
+            animation-name: cor;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards; 
+        }
+        @keyframes cor {
+            100% {
+                background-color: rgb(112, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="botao" type="submit">Submit</button>
+</body>
+</html>

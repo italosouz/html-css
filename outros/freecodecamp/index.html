@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        form {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body> <!-- 
+    O action da tag form,  é para direcionar o envio das informações do formulário para um local específico, através de um link.
+
+    O input é um campo para receber informações do usuário, dependendo do seu tipo, se for text, ele permitirá escrever no input, se for radio, será um botão de seleção único.
+
+    O atributo "required" indica que aquele campo é obrigatório e o forms só será enviado após ele ser preenchido.
+
+    para criar esses botões de seleção, adicionamos sempre o imput dentro da label, e o navegador já vai associar aquela label ao input indicado. É recomendado adicionado o for dentro da label, com o mesmo valor do id adicionado no input.
+
+    O campo name, deve ser adicionado igual em todos os inputs que fazem parte de uma mesma seleção, para que o navegador identifique corretamente.
+
+    o "value" serve para indicar o valor informado do formulário ao servidor quando este for enviado com a opção selecionada. Se o campo Indoor for selecionado, o servidor irá entender: indoor-outdoor = indoor
+
+    o atributo "checked" marca a seleção por padrão onde ele foi indicado.
+
+    a tag fieldset agrupa campos dentro de uma caixa e a tag legend gera uma legenda, tipo um título para nomear esse agrupamento.
+-->
+    <form action="#">
+        <input type="text" placeholder="insira o texto aqui" required>
+        <label for="indoor">
+            <input type="radio" value="indoor" name="indoor-outdoor" id="indoor" checked>Indoor
+        </label>
+        <label for="outdoor">
+            <input type="radio" value="outdoor" name="indoor-outdoor" id="outdoor">outdoor
+        </label>
+        <fieldset>
+            <legend>Itens</legend>
+            <label for="caixa1">
+                <input type="checkbox" value="um" name="selected" id="caixa1" checked>um
+            </label>
+            <label for="caixa2">
+                <input type="checkbox" value="dois" name="selected" id="caixa2">dois
+            </label>
+            <label for="caixa3">
+                <input type="checkbox" value="tres" name="selected" id="caixa3">três
+            </label>
+        </fieldset>
+        <label for="data">Insira a data:
+            <input type="date" id="data" name="data">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
